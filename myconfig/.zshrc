@@ -1,0 +1,66 @@
+#!/bin/zsh
+
+export TERM_SESSION_ID="w0t0p0:78717B03-17A7-4FEB-9A00-4C2F28004083"
+export SSH_AUTH_SOCK="/private/tmp/com.apple.launchd.AU9nacJ7AS/Listeners"
+export LC_TERMINAL_VERSION="3.4.3"
+export COLORFGBG="7;0"
+export ITERM_PROFILE="Default"
+export XPC_FLAGS="0x0"
+export LANG="en_US.UTF-8"
+export PWD="/Users/harvey/src/myconfig"
+export SHELL="/bin/zsh"
+export TERM_PROGRAM_VERSION="3.4.3"
+export TERM_PROGRAM="iTerm.app"
+export PATH="/Users/harvey/.pyenv/plugins/pyenv-virtualenv/shims:/Users/harvey/.pyenv/shims:/Users/harvey/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/harvey/.fzf/bin"
+export LC_TERMINAL="iTerm2"
+export COLORTERM="truecolor"
+export COMMAND_MODE="unix2003"
+export TERM="xterm-256color"
+export HOME="/Users/harvey"
+export TMPDIR="/var/folders/m8/dnk1_5m53t98tj1sl_47rj6h0000gn/T/"
+export USER="harvey"
+export XPC_SERVICE_NAME="0"
+export LOGNAME="harvey"
+export ITERM_SESSION_ID="w0t0p0:78717B03-17A7-4FEB-9A00-4C2F28004083"
+export __CF_USER_TEXT_ENCODING="0x0:0:0"
+export SHLVL="1"
+export OLDPWD="/Users/harvey/src"
+export BROWSER="open"
+export EDITOR="nano"
+export VISUAL="nano"
+export PAGER="less"
+export LESS="-F -g -i -M -R -S -w -X -z-4"
+export LESS_TERMCAP_mb="[01;31m"
+export LESS_TERMCAP_md="[01;31m"
+export LESS_TERMCAP_me="[0m"
+export LESS_TERMCAP_se="[0m"
+export LESS_TERMCAP_so="[00;47;30m"
+export LESS_TERMCAP_ue="[0m"
+export LESS_TERMCAP_us="[01;32m"
+
+export LSCOLORS="gxbxcxdxfxegedabagacad"
+export GREP_COLOR="37;45"
+export PYENV_SHELL="zsh"
+export PYENV_VIRTUALENV_INIT="1"
+
+export NEWLINE=$'\n'
+export PS1="%F{green}%D{%b/%d/%y(%a)}%f%F{yellow}%D{%R(%Z)}%f:[%F{cyan1}%~%f]${NEWLINE}%% "
+
+alias zs='echo "source ~/.zshrc" && source ~/.zshrc'
+alias zv='echo "vi ~/.zshrc" && vi ~/.zshrc'
+alias l='ls -1A -G'
+alias ls='ls -G'
+alias ll='ls -lh --color'
+alias la='ll -A'
+alias lc='lt -c'
+alias lk='ll -Sr'
+alias lm='la | "$PAGER"'
+alias ln='nocorrect ln -i'
+alias lni='nocorrect ln -i'
+alias locate='noglob locate'
+alias lr='ll -R'
+alias lt='ll -tr'
+alias lu='lt -u'
+alias lx='ll -XB'
+alias zs="source $HOME/.zshrc"
+alias zv="vi $HOME/.zshrc"
