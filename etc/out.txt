@@ -1,0 +1,260 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.036  000.036: --- VIM STARTING ---
+000.295  000.259: Allocated generic buffers
+001.847  001.552: locale set
+001.858  000.011: clipboard setup
+001.870  000.012: window checked
+004.513  002.643: inits 1
+004.537  000.024: parsing arguments
+004.539  000.002: expanding arguments
+011.162  006.623: shell init
+012.107  000.945: Termcap init
+012.158  000.051: inits 2
+012.488  000.330: init highlight
+030.680  015.959  015.959: sourcing /usr/local/share/vim/vim82/filetype.vim
+031.016  000.074  000.074: sourcing /usr/local/share/vim/vim82/ftplugin.vim
+031.253  000.027  000.027: sourcing /usr/local/share/vim/vim82/filetype.vim
+031.670  000.085  000.085: sourcing /usr/local/share/vim/vim82/indent.vim
+032.003  000.076  000.076: sourcing /usr/local/share/vim/vim82/delmenu.vim
+033.317  000.047  000.047: sourcing /usr/local/share/vim/vim82/lang/menu_en_gb.latin1.vim
+033.739  000.030  000.030: sourcing /usr/local/Cellar/vim/8.2.2300/share/vim/vim82/lang/menu_en_gb.latin1.vim
+033.750  000.197  000.167: sourcing /usr/local/share/vim/vim82/lang/menu_en_gb.utf-8.vim
+034.947  000.090  000.090: sourcing /usr/local/share/vim/vim82/autoload/paste.vim
+039.840  007.726  007.392: sourcing /usr/local/share/vim/vim82/menu.vim
+041.999  001.285  001.285: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+042.316  001.821  000.536: sourcing /usr/local/share/vim/vim82/syntax/synload.vim
+042.373  002.115  000.294: sourcing /usr/local/share/vim/vim82/syntax/syntax.vim
+043.200  000.439  000.439: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+045.033  031.056  004.555: sourcing /Users/harvey/.vim_runtime/vimrcs/basic.vim
+045.446  000.212  000.212: sourcing /Users/harvey/.vim_runtime/vimrcs/filetypes.vim
+046.616  000.581  000.581: sourcing /Users/harvey/.vim_runtime/autoload/pathogen.vim
+052.743  003.955  003.955: sourcing /usr/local/share/vim/vim82/ftoff.vim
+063.634  009.695  009.695: sourcing /usr/local/share/vim/vim82/filetype.vim
+074.872  002.438  002.438: sourcing /usr/local/share/vim/vim82/ftoff.vim
+083.376  000.063  000.063: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+083.587  000.048  000.048: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+083.787  000.026  000.026: sourcing /Users/harvey/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+083.993  000.046  000.046: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+084.205  000.060  000.060: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+084.300  000.026  000.026: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+084.518  000.018  000.018: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+084.738  000.015  000.015: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+084.845  000.041  000.041: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+085.011  000.014  000.014: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+085.200  000.056  000.056: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+085.415  000.042  000.042: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+085.768  000.131  000.131: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+086.019  000.180  000.180: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+086.451  010.761  009.995: sourcing /usr/local/share/vim/vim82/filetype.vim
+091.897  001.920  001.920: sourcing /usr/local/share/vim/vim82/ftoff.vim
+099.288  000.048  000.048: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+099.465  000.042  000.042: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+099.687  000.021  000.021: sourcing /Users/harvey/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+099.863  000.036  000.036: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+100.044  000.049  000.049: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+100.124  000.020  000.020: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+100.303  000.012  000.012: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+100.485  000.013  000.013: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+100.572  000.033  000.033: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+100.708  000.013  000.013: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+100.857  000.044  000.044: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+101.003  000.020  000.020: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+101.271  000.102  000.102: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+101.523  000.193  000.193: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+101.900  009.298  008.652: sourcing /usr/local/share/vim/vim82/filetype.vim
+213.943  003.703  003.703: sourcing /usr/local/share/vim/vim82/ftoff.vim
+226.611  000.087  000.087: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+226.915  000.074  000.074: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+227.190  000.031  000.031: sourcing /Users/harvey/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+227.487  000.058  000.058: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+227.795  000.088  000.088: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+227.931  000.036  000.036: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+228.237  000.018  000.018: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+228.548  000.020  000.020: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+228.706  000.065  000.065: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+228.948  000.022  000.022: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+229.224  000.081  000.081: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+229.475  000.032  000.032: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+229.987  000.209  000.209: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+230.374  000.289  000.289: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+231.176  015.814  014.704: sourcing /usr/local/share/vim/vim82/filetype.vim
+232.002  186.386  128.221: sourcing /Users/harvey/.vim_runtime/vimrcs/plugins_config.vim
+233.081  000.930  000.930: sourcing /Users/harvey/.vim_runtime/vimrcs/extended.vim
+239.154  004.859  004.859: sourcing /Users/harvey/.vim_runtime/autoload/plug.vim
+250.128  003.571  003.571: sourcing /usr/local/share/vim/vim82/ftoff.vim
+266.176  000.054  000.054: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+266.513  000.053  000.053: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+266.701  000.022  000.022: sourcing /Users/harvey/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+266.893  000.039  000.039: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+267.090  000.053  000.053: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+267.218  000.023  000.023: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+267.416  000.014  000.014: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+267.613  000.014  000.014: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+267.709  000.036  000.036: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+267.856  000.014  000.014: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+268.021  000.048  000.048: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+268.177  000.021  000.021: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+268.466  000.110  000.110: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+268.679  000.152  000.152: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+269.123  013.217  012.564: sourcing /usr/local/share/vim/vim82/filetype.vim
+270.044  000.016  000.016: sourcing /usr/local/share/vim/vim82/ftplugin.vim
+270.934  000.015  000.015: sourcing /usr/local/share/vim/vim82/indent.vim
+271.093  037.879  016.201: sourcing /Users/harvey/.vim_runtime/my_configs.vim
+272.875  000.342  000.342: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+274.567  000.243  000.243: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+276.480  000.208  000.208: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+278.927  007.565  006.772: sourcing /Users/harvey/.vim_runtime/autoload/awesome-vim-colorschemes/colors/happy_hacking.vim
+281.922  000.247  000.247: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+283.534  000.246  000.246: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+293.385  014.259  013.766: sourcing /Users/harvey/.vim_runtime/autoload/awesome-vim-colorschemes/colors/PaperColor.vim
+294.095  000.421  000.421: sourcing /usr/local/Cellar/vim/8.2.2300/share/vim/vim82/syntax/nosyntax.vim
+299.583  000.777  000.777: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+303.642  000.494  000.494: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+312.998  017.849  016.578: sourcing /Users/harvey/.vim_runtime/autoload/awesome-vim-colorschemes/colors/PaperColor.vim
+313.146  018.143  000.294: sourcing /usr/local/share/vim/vim82/syntax/synload.vim
+313.188  019.638  001.074: sourcing /usr/local/share/vim/vim82/syntax/syntax.vim
+313.912  000.447  000.447: sourcing /usr/local/Cellar/vim/8.2.2300/share/vim/vim82/syntax/nosyntax.vim
+319.647  000.574  000.574: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+322.058  000.562  000.562: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+332.057  016.877  015.741: sourcing /Users/harvey/.vim_runtime/autoload/awesome-vim-colorschemes/colors/PaperColor.vim
+332.209  017.253  000.376: sourcing /usr/local/share/vim/vim82/syntax/synload.vim
+332.252  018.900  001.200: sourcing /usr/local/share/vim/vim82/syntax/syntax.vim
+332.713  319.511  002.686: sourcing $HOME/.vimrc
+332.723  000.724: sourcing vimrc file(s)
+333.308  000.180  000.180: sourcing /Users/harvey/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+334.104  000.574  000.574: sourcing /Users/harvey/.vim_runtime/autoload/tabnine-vim/plugin/youcompleteme.vim
+334.525  000.091  000.091: sourcing /Users/harvey/.vim_runtime/autoload/YCM-Generator/plugin/ycm-generator.vim
+335.918  001.221  001.221: sourcing /Users/harvey/.fzf/plugin/fzf.vim
+336.515  000.243  000.243: sourcing /Users/harvey/.vim_runtime/autoload/scratch.vim/plugin/scratch.vim
+338.152  000.077  000.077: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/autoloclist.vim
+338.349  000.028  000.028: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/balloons.vim
+338.541  000.022  000.022: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/checker.vim
+338.682  000.016  000.016: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/cursor.vim
+338.766  000.014  000.014: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/highlighting.vim
+338.847  000.013  000.013: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/loclist.vim
+338.927  000.013  000.013: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/modemap.vim
+339.008  000.013  000.013: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/notifiers.vim
+339.144  000.038  000.038: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/registry.vim
+339.240  000.014  000.014: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/signs.vim
+340.412  000.689  000.689: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/autoload/syntastic/util.vim
+350.987  000.177  000.177: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/autoloclist.vim
+351.180  000.076  000.076: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/balloons.vim
+351.491  000.240  000.240: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/checker.vim
+351.681  000.118  000.118: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/cursor.vim
+351.852  000.105  000.105: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/highlighting.vim
+352.290  000.374  000.374: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/loclist.vim
+352.484  000.120  000.120: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/modemap.vim
+352.648  000.100  000.100: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/notifiers.vim
+353.153  000.443  000.443: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/registry.vim
+353.349  000.130  000.130: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic/signs.vim
+356.108  016.777  014.205: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/plugin/syntastic.vim
+358.052  000.139  000.139: sourcing /Users/harvey/.vim_runtime/autoload/ale/autoload/ale/events.vim
+358.785  002.256  002.117: sourcing /Users/harvey/.vim_runtime/autoload/ale/plugin/ale.vim
+368.182  009.066  009.066: sourcing /Users/harvey/.vim_runtime/autoload/vim-easymotion/plugin/EasyMotion.vim
+369.103  000.399  000.399: sourcing /Users/harvey/.vim_runtime/autoload/lightline.vim/plugin/lightline.vim
+369.615  000.307  000.307: sourcing /Users/harvey/.vim_runtime/autoload/vim-commentary/plugin/commentary.vim
+370.692  000.887  000.887: sourcing /Users/harvey/.vim_runtime/autoload/taglist.vim/plugin/taglist.vim
+372.000  001.029  001.029: sourcing /Users/harvey/.vim_runtime/autoload/vim-buftabline/plugin/buftabline.vim
+372.491  000.221  000.221: sourcing /Users/harvey/.vim_runtime/autoload/vim-radical/plugin/radical.vim
+373.677  000.978  000.978: sourcing /Users/harvey/.vim_runtime/autoload/vim-surround/plugin/surround.vim
+374.843  000.784  000.784: sourcing /Users/harvey/.vim_runtime/autoload/auto-pairs/plugin/auto-pairs.vim
+375.183  000.024  000.024: sourcing /Users/harvey/.vim_runtime/sources_non_forked/ale/plugin/ale.vim
+375.381  000.019  000.019: sourcing /Users/harvey/.vim_runtime/sources_non_forked/auto-pairs/plugin/auto-pairs.vim
+377.027  001.472  001.472: sourcing /Users/harvey/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+378.079  000.284  000.284: sourcing /Users/harvey/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+378.443  001.220  000.936: sourcing /Users/harvey/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+378.688  000.055  000.055: sourcing /Users/harvey/.vim_runtime/sources_non_forked/gist-vim/plugin/gist.vim
+378.942  000.031  000.031: sourcing /Users/harvey/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+379.367  000.170  000.170: sourcing /Users/harvey/.vim_runtime/sources_non_forked/lightline-ale/plugin/lightline/ale.vim
+379.563  000.020  000.020: sourcing /Users/harvey/.vim_runtime/sources_non_forked/lightline.vim/plugin/lightline.vim
+380.676  000.255  000.255: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+381.968  000.595  000.595: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+382.667  000.261  000.261: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+383.306  000.112  000.112: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+383.972  000.249  000.249: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+384.961  000.565  000.565: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+386.088  000.688  000.688: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+387.535  000.940  000.940: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+388.455  000.498  000.498: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+389.455  000.566  000.566: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+390.016  000.131  000.131: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+390.621  000.187  000.187: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+391.402  000.379  000.379: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+391.837  000.025  000.025: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+392.337  000.056  000.056: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+393.356  000.565  000.565: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+397.921  001.007  001.007: sourcing /Users/harvey/.vim_runtime/autoload/vim-nerdtree-tabs/nerdtree_plugin/vim-nerdtree-tabs.vim
+398.901  000.123  000.123: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+399.951  000.959  000.959: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+400.135  000.087  000.087: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/vcs.vim
+401.315  021.506  013.258: sourcing /Users/harvey/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+401.677  000.132  000.132: sourcing /Users/harvey/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+402.047  000.129  000.129: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/plugin/cargo.vim
+402.184  000.051  000.051: sourcing /Users/harvey/.vim_runtime/sources_non_forked/rust.vim/plugin/rust.vim
+402.677  000.305  000.305: sourcing /Users/harvey/.vim_runtime/sources_non_forked/tabular/plugin/Tabular.vim
+403.017  000.149  000.149: sourcing /Users/harvey/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+404.281  001.034  001.034: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-abolish/plugin/abolish.vim
+404.592  000.019  000.019: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-commentary/plugin/commentary.vim
+405.878  000.470  000.470: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+406.208  001.429  000.959: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+408.940  002.475  002.475: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+409.193  000.022  000.022: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-gist/plugin/gist.vim
+410.421  000.232  000.232: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter/utility.vim
+412.028  000.222  000.222: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter/highlight.vim
+414.138  004.730  004.276: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-gitgutter/plugin/gitgutter.vim
+414.716  000.332  000.332: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+415.192  000.247  000.247: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-lastplace/plugin/vim-lastplace.vim
+416.006  000.561  000.561: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+417.092  000.078  000.078: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+417.482  001.092  001.014: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+417.748  000.044  000.044: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+417.969  000.018  000.018: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+419.423  000.482  000.482: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-yankstack/autoload/yankstack.vim
+420.263  002.096  001.614: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-yankstack/plugin/yankstack.vim
+420.580  000.101  000.101: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+420.869  000.066  000.066: sourcing /Users/harvey/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+421.275  000.178  000.178: sourcing /Users/harvey/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+421.555  000.064  000.064: sourcing /Users/harvey/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+422.574  000.086  000.086: sourcing /usr/local/share/vim/vim82/plugin/getscriptPlugin.vim
+423.081  000.417  000.417: sourcing /usr/local/share/vim/vim82/plugin/gzip.vim
+423.488  000.311  000.311: sourcing /usr/local/share/vim/vim82/plugin/logiPat.vim
+423.625  000.040  000.040: sourcing /usr/local/share/vim/vim82/plugin/manpager.vim
+423.956  000.242  000.242: sourcing /usr/local/share/vim/vim82/plugin/matchparen.vim
+424.891  000.837  000.837: sourcing /usr/local/share/vim/vim82/plugin/netrwPlugin.vim
+425.031  000.021  000.021: sourcing /usr/local/share/vim/vim82/plugin/rrhelper.vim
+425.171  000.034  000.034: sourcing /usr/local/share/vim/vim82/plugin/spellfile.vim
+425.477  000.206  000.206: sourcing /usr/local/share/vim/vim82/plugin/tarPlugin.vim
+425.717  000.133  000.133: sourcing /usr/local/share/vim/vim82/plugin/tohtml.vim
+426.037  000.217  000.217: sourcing /usr/local/share/vim/vim82/plugin/vimballPlugin.vim
+426.403  000.250  000.250: sourcing /usr/local/share/vim/vim82/plugin/zipPlugin.vim
+426.444  015.875: loading plugins
+426.568  000.124: loading packages
+427.298  000.401  000.401: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+428.598  000.328  000.328: sourcing /Users/harvey/.vim_runtime/sources_non_forked/tabular/autoload/tabular.vim
+430.931  003.295  002.967: sourcing /Users/harvey/.vim_runtime/sources_non_forked/tabular/after/plugin/TabularMaps.vim
+431.005  000.741: loading after plugins
+431.020  000.015: inits 3
+431.510  000.490: reading viminfo
+431.548  000.038: setting raw mode
+431.579  000.031: start termcap
+431.617  000.038: clearing screen
+432.870  000.299  000.299: sourcing /Users/harvey/.vim_runtime/autoload/syntastic/autoload/syntastic/log.vim
+433.017  001.101: opening buffers
+434.331  000.512  000.512: sourcing /Users/harvey/.vim_runtime/autoload/lightline.vim/autoload/lightline.vim
+435.198  000.061  000.061: sourcing /Users/harvey/.vim_runtime/autoload/lightline.vim/autoload/lightline/tab.vim
+436.186  000.258  000.258: sourcing /Users/harvey/.vim_runtime/autoload/lightline.vim/autoload/lightline/colorscheme.vim
+437.083  001.528  001.270: sourcing /Users/harvey/.vim_runtime/autoload/lightline.vim/autoload/lightline/colorscheme/wombat.vim
+444.455  000.190  000.190: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter.vim
+445.150  009.842: BufEnter autocommands
+445.153  000.003: editing files in windows
+447.462  000.856  000.856: sourcing /Users/harvey/.vim_runtime/autoload/tabnine-vim/autoload/youcompleteme.vim
+641.798  195.789: VimEnter autocommands
+641.804  000.006: before starting main loop
+658.372  012.457  012.457: sourcing /Users/harvey/.vim_runtime/sources_non_forked/vim-fugitive/autoload/fugitive.vim
+663.732  009.471: first screen update
+663.737  000.005: --- VIM STARTED ---

@@ -1,0 +1,47 @@
+abcdefghijklmnopqrstuvwxyz
+------
+yw  : fghijklmnopqrstuvwxyz
+yW  : fghijklmnopqrstuvwxyz
+yiw : abcdefghijklmnopqrstuvwxyz
+yiW : abcdefghijklmnopqrstuvwxyz
+
+abcdefghijklmnopqrstuvwxyz*&!(({"':;'"}))
+------
+fghijklmnopqrstuvwxyz
+yw  : fghijklmnopqrstuvwxyz
+yW  : fghijklmnopqrstuvwxyz*&!({"':;'"})
+yiw : abcdefghijklmnopqrstuvwxyz
+yiW : abcdefghijklmnopqrstuvwxyz*&!({"':;'"})
+
+Keys        Operator        Movement
+----        --------        ---------
+dw          Delete          to nex word
+ci(         Change          inside pattern
+yt,         Yank            until comma
+
+return person.get_pets(typ='dogs', fluffy_only=True)
+
+def count(1):
+    i += 1
+    print i
+
+    return foo
+
+print foo("hello")
+
+Topic One
+=========
+hideaki_shimizu@moriousa.com
+
+This is some text about topic one.
+It has multiple paragraphs.
+
+Topic Two
+---------
+This is some text about topic two. It has only one paragraph.
+
+
+Topic Three
+===========
+
+
