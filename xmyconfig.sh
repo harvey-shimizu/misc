@@ -5,9 +5,20 @@ declare MISC_MYCONFIG="${2:-$PWD}"
 
 if [ "$option" != "pull" ] && [ "$option" != "push" ] ; then
     echo "Nothing to do. Please input an option [and a directory]."
-    exit
+    exit 1
+fi
+if [ "$(uname)" == 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  OS='Linux'
+elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
+  OS='Cygwin'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
 fi
 
+echo "OS       : $OS"
 echo "option   : $option"
 echo "directory: $MISC_MYCONFIG"
 
@@ -34,11 +45,11 @@ if [ "$option" = "pull" ]; then
         echo ".vimrc file is not found"
     fi
 
-    if [ -f $HOME/.bashrc ]; then
+    if [ -f $HOME/.bashrc ] && [ "$OS" =  "Cygwin" ]; then
         echo "cp $HOME/.bashrc $MISC_MYCONFIG"
         cp $HOME/.bashrc $MISC_MYCONFIG
 
-    elif [ -f $HOME/.zshrc ]; then
+    elif [ -f $HOME/.zshrc ] && [ "$OS" = "Mac" ]; then
         echo "cp $HOME/.zshrc $MISC_MYCONFIG"
         cp $HOME/.zshrc $MISC_MYCONFIG
 
@@ -83,11 +94,11 @@ elif [ "$option" = "push" ]; then
         echo ".vimrc file is not found"
     fi
 
-    if [ -f $MISC_MYCONFIG/.bashrc ]; then
+    if [ -f $HOME/.bashrc ] && [ "$OS" =  "Cygwin" ]; then
         echo "cp -r $MISC_MYCONFIG/.bashrc $HOME/.bashrc"
         cp -f $MISC_MYCONFIG $HOME/.bashrc
 
-    elif [ -f $MISC_MYCONFIG/.zshrc ]; then
+    elif [ -f $HOME/.zshrc ] && [ "$OS" = "Mac" ]; then
         echo "cp -r $MISC_MYCONFIG/.zshrc $HOME/.zshrc"
         cp -f $MISC_MYCONFIG/.zshrc $HOME/.zshrc
 
@@ -103,7 +114,7 @@ elif [ "$option" = "push" ]; then
     fi
 
     if [ -f $MISC_MYCONFIG/my_configs.vim ]; then
-        echo "cp -r $MISC_MYCONFIG $HOME/.vim_runtime/my_configs.vim"
+        echo "cp -r $MISC_MYCONFIG/my_configs $HOME/.vim_runtime/my_configs.vim"
         cp -f $MISC_MYCONFIG/my_configs.vim $HOME/.vim_runtime/my_configs.vim
     else
         echo "my_configs file is not found"
