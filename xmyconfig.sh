@@ -114,7 +114,7 @@ elif [ "$option" = "push" ]; then
     fi
 
     if [ -f $MISC_MYCONFIG/my_configs.vim ]; then
-        echo "cp -r $MISC_MYCONFIG/my_configs $HOME/.vim_runtime/my_configs.vim"
+        echo "cp -r $MISC_MYCONFIG/my_configs.vim $HOME/.vim_runtime/my_configs.vim"
         cp -f $MISC_MYCONFIG/my_configs.vim $HOME/.vim_runtime/my_configs.vim
     else
         echo "my_configs file is not found"
