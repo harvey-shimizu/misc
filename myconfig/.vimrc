@@ -27,8 +27,8 @@ let g:EasyMotion_leader_key = "!"
 nmap s <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-overwin-2f)
 "let g:EasyMotion_smartcase = 1
-"nn <leader>j <Plug>(easymotion-j) 
-"nn <leader>k <Plug>(easymotion-k) 
+"nn <leader>j <Plug>(easymotion-j)
+"nn <leader>k <Plug>(easymotion-k)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Related Configuration
@@ -58,8 +58,10 @@ nmap <leader>r :!python3 %<cr>
 inoremap kk <esc>
 
 nnoremap <leader>hc :helpc<cr>
+" Very magic mode in searching
 nnoremap / /\v
-
+" Command to delete all of trailing whitespaces in a file.
+nnoremap ds :%s/\v\s+$//g<cr>
 
 "Run Terminal in Vim
 nnoremap <localleader>t :vertical terminal<cr>
@@ -90,9 +92,13 @@ ab ** **********    [Title]    **********
 " autocommand in Vim for pyhton script
 " Vimscript file settings --------------------- {{{
 augroup filetype_python
-    au!
-    au FileType Python nn <buffer> <localleader> I#<esc>
-    au FileType Python :ia <buffer> iff if:<left>
-    au FileType Python :ia <buffer> if iff:<left>
+    autocmd!
+    autocmd FileType Python nnoremap <buffer> <localleader> I#<esc>
+    autocmd FileType Python :iabbrev <buffer> iff if:<left>
+    autocmd FileType Python :iabbrev <buffer> if iff:<left>
+
+    " Highlighting in green a trailing whitespace.
+    autocmd FileType Python :highlight mymark_space ctermbg=green guidb=green
+    autocmd FileType Python :match mymark_space /\v\s+$/
 augroup END
 "}}}
