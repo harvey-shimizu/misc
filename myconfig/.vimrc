@@ -57,7 +57,9 @@ nmap <localleader>a :q<cr>
 nmap <leader>r :!python3 %<cr>
 inoremap kk <esc>
 
-nn <leader>hc :helpc<cr>
+nnoremap <leader>hc :helpc<cr>
+nnoremap / /\v
+
 
 "Run Terminal in Vim
 nnoremap <localleader>t :vertical terminal<cr>
@@ -69,9 +71,9 @@ set tags=~/mytags,~/mytags.vim
 
 "buffer control
 set hidden
-nn <C-L> :bnext<cr>
-nn <C-H> :bprev<cr>
-nn <leader>db :bd<cr>
+nnoremap <C-L> :bnext<cr>
+nnoremap <C-H> :bprev<cr>
+nnoremap <leader>db :bd<cr>
 
 nnoremap <leader>ls :ls<cr>
 nnoremap <leader>b1 :b 1<cr>
