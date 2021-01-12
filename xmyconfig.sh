@@ -9,9 +9,11 @@ if [ "$option" != "pull" ] && [ "$option" != "push" ] ; then
 fi
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
-elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+#elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+elif [ "$(uname -s | cut -d'_' -f 1)" == 'Linux' ]; then
   OS='Linux'
-elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
+#elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
+elif [ "$(uname -s | cut -d'_' -f 1)" == 'CYGWIN' ]; then
   OS='Cygwin'
 else
   echo "Your platform ($(uname -a)) is not supported."

@@ -54,7 +54,7 @@ Plug 'mtth/scratch.vim'
 "--Python Semantic highlightiing for Vim
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 "--Python Semantic highlightiing for Vim, but it comes with a lot highlighting 
-"Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop' }
+"Plug 'python-mode/python-mode' 'branch': 'develop' }
 
 "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell. 
 Plug 'vim-syntastic/syntastic'

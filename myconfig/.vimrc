@@ -38,7 +38,8 @@ let maplocalleader = "\\"
 set number
 set rnu
 set cursorline
-set foldmethod=manual
+"set foldmethod=manual
+set foldmethod=marker
 set clipboard=unnamed
 set encoding=UTF-8
 
@@ -82,9 +83,9 @@ nnoremap <leader>b1 :b 1<cr>
 nnoremap <leader>b2 :b 2<cr>
 nnoremap <leader>b3 :b 3<cr>
 nnoremap <leader>b4 :b 4<cr>
-nnoremap <leader>b5 :b 5<cr>
-nnoremap <leader>b6 :b 6<cr>
-nnoremap <leader>b7 :b 7<cr>
+nnoremap <leader>b6 :b 5<cr>
+nnoremap <leader>b7 :b 6<cr>
+nnoremap <leader>b8 :b 7<cr>
 nnoremap <leader>b8 :b 8<cr>
 nnoremap <leader>b9 :b 9<cr>
 ab ** **********    [Title]    **********
@@ -93,12 +94,14 @@ ab ** **********    [Title]    **********
 " Vimscript file settings --------------------- {{{
 augroup filetype_python
     autocmd!
-    autocmd FileType Python nnoremap <buffer> <localleader> I#<esc>
-    autocmd FileType Python :iabbrev <buffer> iff if:<left>
-    autocmd FileType Python :iabbrev <buffer> if iff:<left>
+    autocmd FileType python nnoremap <buffer> <localleader> I#<esc>
+    autocmd FileType python :iabbrev <buffer> iff if:<left>
+augroup END
 
+augroup trailing_whitespace
+    autocmd!
     " Highlighting in green a trailing whitespace.
-    autocmd FileType Python :highlight mymark_space ctermbg=green guidb=green
-    autocmd FileType Python :match mymark_space /\v\s+$/
+    autocmd BufNewFile,BufRead * highlight mymark_space ctermbg=Green
+    autocmd BufNewFile,BufRead * match mymark_space /\v\s+$/
 augroup END
 "}}}
