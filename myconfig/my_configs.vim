@@ -40,7 +40,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 " Using a non-default branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
-"TabNine offers a cloud-based configuration, which allows for usage of more robust models that cannot be run locally on a development machine. 
+"TabNine offers a cloud-based configuration, which allows for usage of more robust models that cannot be run locally on a development machine.
 "Plug 'codota/tabnine-vim'
 
 " Plugin outside ~/.vim/plugged with post-update hook
@@ -53,10 +53,10 @@ Plug 'mtth/scratch.vim'
 
 "--Python Semantic highlightiing for Vim
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-"--Python Semantic highlightiing for Vim, but it comes with a lot highlighting 
+"--Python Semantic highlightiing for Vim, but it comes with a lot highlighting
 "Plug 'python-mode/python-mode' 'branch': 'develop' }
 
-"Syntastic is a syntax checking plugin for Vim created by Martin Grenfell. 
+"Syntastic is a syntax checking plugin for Vim created by Martin Grenfell.
 Plug 'vim-syntastic/syntastic'
 
 "Python Syntax highlightiing for Vim
@@ -71,11 +71,11 @@ Plug 'easymotion/vim-easymotion'
 "A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
-"vim-commentary is extremely simple to use: 
+"vim-commentary is extremely simple to use:
 "Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), and gc in visual mode to comment out the selection. That’s it.
 Plug 'tpope/vim-commentary'
 
-"The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.  
+"The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
 Plug 'vim-scripts/taglist.vim'
 
 Plug 'ap/vim-buftabline'
@@ -85,7 +85,7 @@ Plug 'ap/vim-buftabline'
 "
 " *************** Below Plugins are tools provided for improving key inputs efficiency ******************************
 
-"Radical.vim is a Vim plugin that converts between the number representations encountered when programming, that is in addition to decimal, hex, octal, and binary representation. 
+"Radical.vim is a Vim plugin that converts between the number representations encountered when programming, that is in addition to decimal, hex, octal, and binary representation.
 Plug 'glts/vim-radical'
 "Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 Plug 'tpope/vim-surround'

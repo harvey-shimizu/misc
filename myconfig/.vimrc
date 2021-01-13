@@ -63,6 +63,8 @@ nnoremap <leader>hc :helpc<cr>
 nnoremap / /\v
 " Command to delete all of trailing whitespaces in a file.
 nnoremap ds :%s/\v\s+$//g<cr>
+"Ivoking FzF program
+nnoremap fz :FZF<cr>
 
 "Run Terminal in Vim
 nnoremap <localleader>t :vertical terminal<cr>
