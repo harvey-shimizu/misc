@@ -13,7 +13,7 @@ Plug 'junegunn/vim-plug'
 " *************** Below Plugins are tools provided for completion ************************************
 "
 ""a code-completion engine for Vim
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 ""a code-completion engine for Vim
 Plug 'codota/tabnine-vim'

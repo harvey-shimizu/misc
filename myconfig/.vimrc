@@ -66,10 +66,15 @@ nnoremap ds :%s/\v\s+$//g<cr>
 "Ivoking FzF program
 nnoremap fz :FZF<cr>
 
+nnoremap <leader>eb :e! ~/.bashrc<cr>
+nnoremap <leader>ez :e! ~/.zshrc<cr>
+
 "Run Terminal in Vim
 nnoremap <localleader>t :vertical terminal<cr>
 nnoremap <localleader>v :vertical terminal<cr>
 nnoremap <localleader>h :terminal<cr>
+
+nnoremap <leader>k :execute "help " . expand('<cword>')<cr>
 
 "Ctags for Python or etc
 set tags=~/mytags,~/mytags.vim

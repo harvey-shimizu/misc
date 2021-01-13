@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # To the extent possible under law, the author(s) have dedicated all
 # copyright and related and neighboring rights to this software to the
 # public domain worldwide. This software is distributed without any warranty.
@@ -25,6 +27,8 @@
 
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
+
+export PATH=$PATH:'/cygdrive/c/Users/Harvey/Downloads'
 
 # Shell Options
 #
@@ -171,7 +175,8 @@
 
    #
    # Remove any other occurence of this dir, skipping the top of the stack
-   for ((cnt=1; cnt <= 10; cnt++)); do
+   #for ((cnt=1; cnt <= 10; cnt++)); do
+   for ((cnt=1; cnt <= 50; cnt++)); do
      x2=$(dirs +${cnt} 2>/dev/null)
      [[ $? -ne 0 ]] && return 0
      [[ ${x2:0:1} == '~' ]] && x2="${HOME}${x2:1}"
@@ -186,7 +191,29 @@
 
 alias cd=cd_func
 
+
+#export FZF_DEFAULT_OPS='--height 40% --reverse --border --inline-info --color=always'
+#export FZF_DEFAULT_OPS='--preview "bat  --color=always --style=header,grid --line-range :100 {} --height 40% --reverse --inline-info --color=always'
+#export FZF_COMPLETION_TRIGGER='**'
+
+if [ "$(uname)" == 'Darwin' ]; then
+    OS='Mac'
+    #elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+    export FZF_DEFAULT_OPTS='--preview "bat --color=always --style=header,grid --line-range :100 {}" --multi --height 70% --reverse --inline-info'
+    export FZF_CTRL_T_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+    export FZF_COMPLETION_OPTS='+c -x'
+elif [ "$(uname -s | cut -d'_' -f 1)" == 'CYGWIN' ]; then
+  OS='Cygwin'
+    export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+    #export FZF_DEFAULT_OPTS='--preview "cat" --reverse --inline-info'
+    export FZF_DEFAULT_OPTS='--preview "bat --color=always --style=header,grid --line-range :100 {}" --multi --reverse --inline-info'
+    export FZF_CTRL_T_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias f='fzf'
+alias vf='vim $(fzf)'
 
 # Zenburn is a low-contrast color scheme for Vim.
 # It is requied to set
@@ -206,6 +233,20 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 alias ipy=/usr/local/bin/python3.9
 alias b="vi ~/.bashrc"
+alias bv="vi ~/.bashrc"
+alias vb="vi ~/.bashrc"
 alias bs="source ~/.bashrc"
+alias sb="source ~/.bashrc"
 alias v=vim
 
+# fshow - git commit browser
+fshow() {
+  git log --graph --color=always \
+      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+      --bind "ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+                {}
+FZF-EOF"
+}
