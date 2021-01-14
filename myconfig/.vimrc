@@ -5,7 +5,6 @@ source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
-
 source ~/.vim_runtime/my_configs.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,14 +21,14 @@ let g:scratch_incert_autohide = 0
 let g:python_highlight_file_header_as_comment = 0
 let g:python_highlight_all = 1
 
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_leader_key = "!"
-nnoremap s <Plug>(easymotion-overwin-f)
-nnoremap s <Plug>(easymotion-overwin-2f)
-"let g:EasyMotion_smartcase = 1
 "nn <leader>j <Plug>(easymotion-j)
 "nn <leader>k <Plug>(easymotion-k)
-
+"
+"let os = matchstr(system('uname -a'), "CYGWIN")
+"if ( os ==# "CYGWIN" )
+if has( "win32unix" )
+    nnoremap + :
+endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Related Configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -60,7 +59,8 @@ inoremap kk <esc>
 
 nnoremap <leader>hc :helpc<cr>
 " Very magic mode in searching
-nnoremap / /\v
+nnoremap / /\v\c
+
 " Command to delete all of trailing whitespaces in a file.
 nnoremap ds :%s/\v\s+$//g<cr>
 "Ivoking FzF program

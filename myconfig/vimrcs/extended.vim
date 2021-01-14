@@ -30,14 +30,6 @@ set guioptions-=L
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map <leader>e0 :e! ~/.vimrc<cr>
-"autocmd! bufwritepost ~/.vimrc source ~/.vimrc
-nnoremap <leader>e0 :e! ~/.vimrc<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-autocmd! bufwritepost $MYVIMRC source $MYVIMRC 
-
-map <leader>ee :e! ~/.vim_runtime/my_configs.vim<cr>
-autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
 
 map <leader>e1 :e! ~/.vim_runtime/vimrcs/basic.vim<cr>
 autocmd! bufwritepost ~/.vim_runtime/vimrcs/basic.vim source ~/.vim_runtime/vimrcs/basic.vim
@@ -51,6 +43,14 @@ autocmd! bufwritepost ~/.vim_runtime/vimrcs/filetypes.vim source ~/.vim_runtime/
 map <leader>e4 :e! ~/.vim_runtime/vimrcs/plugins_config.vim<cr>
 autocmd! bufwritepost ~/.vim_runtime/vimrcs/plugins_config.vim source ~/.vim_runtime/vimrcs/plugins_config.vim
 
+map <leader>ee :e! ~/.vim_runtime/my_configs.vim<cr>
+autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
+
+"map <leader>e0 :e! ~/.vimrc<cr>
+"autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+nnoremap <leader>e0 :e! ~/.vimrc<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
