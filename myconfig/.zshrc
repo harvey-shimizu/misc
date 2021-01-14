@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+if [[ ! "$PATH" == */Users/harvey/src/potion/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/$HOME/src/potion/bin"
+fi
 
 export LSCOLORS="gxbxcxdxfxegedabagacad"
 export GREP_COLOR="37;45"
@@ -13,7 +16,7 @@ alias zs='echo "source ~/.zshrc" && source ~/.zshrc'
 alias zv='echo "vi ~/.zshrc" && vi ~/.zshrc'
 alias l='ls -1A -G'
 alias ls='ls -G'
-alias ll='ls -lh --G'
+alias ll='ls -lh -G'
 alias la='ll -A'
 alias lc='lt -c'
 alias lk='ll -Sr'
@@ -27,3 +30,4 @@ alias lu='lt -u'
 alias lx='ll -XB'
 alias zs="source $HOME/.zshrc"
 alias zv="vi $HOME/.zshrc"
+alias p='potion'

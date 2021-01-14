@@ -24,8 +24,8 @@ let g:python_highlight_all = 1
 
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_leader_key = "!"
-nmap s <Plug>(easymotion-overwin-f)
-nmap s <Plug>(easymotion-overwin-2f)
+nnoremap s <Plug>(easymotion-overwin-f)
+nnoremap s <Plug>(easymotion-overwin-2f)
 "let g:EasyMotion_smartcase = 1
 "nn <leader>j <Plug>(easymotion-j)
 "nn <leader>k <Plug>(easymotion-k)
@@ -36,7 +36,7 @@ nmap s <Plug>(easymotion-overwin-2f)
 " Added by Harvey, 1/1/2021
 let maplocalleader = "\\"
 set number
-set rnu
+nnoremap <F2> :setlocal rnu!<cr>
 set cursorline
 "set foldmethod=manual
 set foldmethod=marker
@@ -51,11 +51,11 @@ syntax on
 syntax enable
 
 " Fast quitting
-nmap <leader>aa :qa!<cr>
-nmap <leader>a :q<cr>
-nmap <localleader>a :q<cr>
+nnoremap <leader>aa :qa!<cr>
+nnoremap <leader>a :q<cr>
+nnoremap <localleader>a :q<cr>
 " Fast Python running
-nmap <leader>r :!python3 %<cr>
+nnoremap <leader>r :!python3 %<cr>
 inoremap kk <esc>
 
 nnoremap <leader>hc :helpc<cr>

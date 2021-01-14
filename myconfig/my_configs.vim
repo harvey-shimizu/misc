@@ -35,10 +35,10 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "This plugin aims at making NERDTree feel like a true panel, independent of tabs.
 "Do this via :NERDTreeTabsToggle
-Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'jistr/vim-nerdtree-tabs'
 
 " Using a non-default branch
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 "TabNine offers a cloud-based configuration, which allows for usage of more robust models that cannot be run locally on a development machine.
 "Plug 'codota/tabnine-vim'
@@ -57,27 +57,26 @@ Plug 'mtth/scratch.vim'
 "Plug 'python-mode/python-mode' 'branch': 'develop' }
 
 "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell.
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 
 "Python Syntax highlightiing for Vim
 Plug 'vim-python/python-syntax'
 
 "ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you edit your text files, and acts as a Vim Language Server Protocol client.
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 "Easy Motion
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 "A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
 "vim-commentary is extremely simple to use:
 "Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), and gc in visual mode to comment out the selection. That’s it.
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 
 "The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
 Plug 'vim-scripts/taglist.vim'
-
 Plug 'ap/vim-buftabline'
 "Plug 'zefei/vim-wintabs'
 "Plug 'zefei/vim-wintabs-powerline'

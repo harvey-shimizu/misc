@@ -34,3 +34,34 @@ function! Mapped(fn, l)
     call map(new_list, string(a:fn) . '(v:val)')
     return new_list
 endfunction
+
+function! Filtered(fn, l)
+    let new_list = deepcopy(a:l)
+    call filter(new_list, string(a:fn) . '(v:val)')
+    return new_list
+endfunction
+
+let mylist = [[1,2,3], [], ['foo'], []]
+
+function! Removed(fn, l)
+    let new_list = deepcopy(a:l)
+    call filter(new_list, '!' . string(a:fn) . '(v:val)')
+    return new_list
+endfunction
+
+" Thursday 2021-01-14 01:50 UTC
+nnoremap <F8> :call GetDate('')<CR>
+function! GetDate(format)
+  let format = empty(a:format) ? '+%A %Y-%m-%d %H:%M UTC' : a:format
+  let cmd = '/bin/date -u ' . shellescape(format)
+  let result = substitute(system(cmd), '[\]\|[[:cntrl:]]', '', 'g')
+  " Append space + result to current line without moving cursor.
+  call setline(line('.'), getline('.') . ' ' . result)
+endfunction
+
+"let txtfile = split(globpath('.', '*.txt'), '\n')
+"echom txtfile
+let txtfile1 = split(globpath('.', '**'), '\n')
+"echom txtfile
+let txtfile2 = split(globpath('.', '*'), '\n')
+
