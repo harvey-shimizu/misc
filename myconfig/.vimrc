@@ -21,6 +21,14 @@ let g:scratch_incert_autohide = 0
 let g:python_highlight_file_header_as_comment = 0
 let g:python_highlight_all = 1
 
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>uu :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_syntax_highlight = 1
+nnoremap <Leader>ff :CtrlPFunky<Cr>
+" Initialise list by a word under cursor
+nnoremap <Leader>u :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
 "nn <leader>j <Plug>(easymotion-j)
 "nn <leader>k <Plug>(easymotion-k)
 "

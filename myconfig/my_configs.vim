@@ -47,6 +47,13 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+"File Manager
+"Plug 'jarun/nnn'
+"Plug 'mcchrish/nnn.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'sgur/ctrlp-extensions.vim'
+Plug 'tacahiroy/ctrlp-funky'
+
 " Scratch for writing memo without saving.
 " Unobtrusive scratch window. Inspired by scratch.vim, enhanced.'
 Plug 'mtth/scratch.vim'
