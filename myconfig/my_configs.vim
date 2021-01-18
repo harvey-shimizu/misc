@@ -29,7 +29,7 @@ Plug 'codota/tabnine-vim'
 Plug 'rafi/awesome-vim-colorschemes'
 
 "Designed as a bright theme with pastel 'retro groove' colors and light/dark mode switching in the way of solarized. The main focus when developing gruvbox is to keep colors easily distinguishable, contrast enough and still pleasant for the eyes.
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -75,8 +75,6 @@ Plug 'vim-python/python-syntax'
 "Easy Motion
 "Plug 'easymotion/vim-easymotion'
 
-"A light and configurable statusline/tabline plugin for Vim
-Plug 'itchyny/lightline.vim'
 
 "vim-commentary is extremely simple to use:
 "Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), and gc in visual mode to comment out the selection. That’s it.
@@ -92,18 +90,23 @@ Plug 'ap/vim-buftabline'
 " *************** Below Plugins are tools provided for improving key inputs efficiency ******************************
 
 "Radical.vim is a Vim plugin that converts between the number representations encountered when programming, that is in addition to decimal, hex, octal, and binary representation.
-Plug 'glts/vim-radical'
+"Plug 'glts/vim-radical'
 "Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 "If you've ever tried using the . command after a plugin map, you were likely disappointed to discover it only repeated the last native command inside that map, rather than the map as a whole. That disappointment ends today. Repeat.vim remaps . in a way that plugins can tap into it.
-Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-repeat'
 
 "Auto Pairs
 "Insert or delete brackets, parents, quotes in pair.
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 "Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.
-Plug 'powerline/powerline'
+"Plug 'powerline/powerline'
+
+"A light and configurable statusline/tabline plugin for Vim
+"Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'"
 
 "Fugitive is the premier Vim plugin for Git. Or maybe it's the premier Git plugin for Vim? Either way, it's "so awesome, it should be illegal". That's why it's called Fugitive.
 "Plug 'tpope/vim-fugitive'
@@ -140,9 +143,9 @@ Plug 'glts/vim-magnum'
 "Plug '~/my-prototype-plugin'
 "
 " Vim Tutor Manual
-Plug 'vim/vim'
+"Plug 'vim/vim'
 " Answers for Learning VimLanguage The Hard Way
-Plug 'degustaf/LvimscriptTHW'
+"Plug 'degustaf/LvimscriptTHW'
 
 " Initialize plugin system
 call plug#end()

@@ -13,13 +13,10 @@ source ~/.vim_runtime/my_configs.vim
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-let g:SimpylFold_docstring_preview = 1
-
 let g:scratch_horizontal = 1
 let g:scratch_incert_autohide = 0
 
 let g:python_highlight_file_header_as_comment = 0
-let g:python_highlight_all = 1
 
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
@@ -29,6 +26,17 @@ nnoremap <Leader>ff :CtrlPFunky<Cr>
 " Initialise list by a word under cursor
 nnoremap <Leader>u :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_theme='qwq'
+let g:airline_theme='dark'
+let g:airline_theme='sonokai'
+let g:airline_theme='simple'
+let g:airline_theme='base16_ashes'
+let g:airline_theme='bubblegum'
+let g:airline_theme='base16_gruvbox_dark_hard'
+"let g:airline_theme='random'
+
 "nn <leader>j <Plug>(easymotion-j)
 "nn <leader>k <Plug>(easymotion-k)
 "
@@ -36,6 +44,9 @@ nnoremap <Leader>u :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 "if ( os ==# "CYGWIN" )
 if has( "win32unix" )
     nnoremap + :
+    nnoremap eb :e ~/.bashrc<cr>
+elseif has( "mac" )
+    nnoremap ez :e ~/.zshrc<cr>
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Related Configuration
@@ -46,16 +57,20 @@ set number
 nnoremap <F2> :setlocal rnu!<cr>
 set cursorline
 "set foldmethod=manual
-set foldmethod=marker
+"set foldmethod=marker
+set foldmethod=indent
 set clipboard=unnamed
 set encoding=UTF-8
+set autochdir
+"set foldopen=all
+"set foldclose=all
+set foldlevelstart=0
+set foldignore=
 
 colorscheme happy_hacking
 colorscheme PaperColor
 "set filetype=python
-"filetype on
-syntax on
-syntax enable
+set showcmd
 
 " Fast quitting
 nnoremap <leader>aa :qa!<cr>
@@ -63,7 +78,9 @@ nnoremap <leader>a :q<cr>
 nnoremap <localleader>a :q<cr>
 " Fast Python running
 nnoremap <leader>r :!python3 %<cr>
-inoremap kk <esc>
+inoremap jk <esc>
+vnoremap jk <esc>
+nnoremap ev :e ~/.vimrc<cr>
 
 nnoremap <leader>hc :helpc<cr>
 " Very magic mode in searching
@@ -72,10 +89,11 @@ nnoremap / /\v\c
 " Command to delete all of trailing whitespaces in a file.
 nnoremap ds :%s/\v\s+$//g<cr>
 "Ivoking FzF program
-nnoremap fz :FZF<cr>
-
-nnoremap <leader>eb :e! ~/.bashrc<cr>
-nnoremap <leader>ez :e! ~/.zshrc<cr>
+"nnoremap fz :FZF<cr>
+nnoremap gz :call fzf#run({'options': '--reverse --preview "bat  --color=always --style=header,grid --line-range :100 {}"', 'down': 20, 'dir': '.', 'sink': 'e'})<cr>
+"nnoremap fz :call fzf#run({'options': '--reverse', 'down': 20, 'dir': '~/src', 'sink': 'e'})<cr>
+nnoremap gh :call fzf#run({'options': '--reverse --preview "bat  --color=always --style=header,grid --line-range :100 {}"', 'down': 20, 'dir': '~', 'sink': 'e'})<cr>
+nnoremap ge :call fzf#run({'options': '--reverse --exact --preview "bat  --color=always --style=header,grid --line-range :100 {}"', 'down': 20, 'dir': '~/src', 'sink': 'e'})<cr>
 
 "Run Terminal in Vim
 nnoremap <localleader>t :vertical terminal<cr>
@@ -98,9 +116,9 @@ nnoremap <leader>b1 :b 1<cr>
 nnoremap <leader>b2 :b 2<cr>
 nnoremap <leader>b3 :b 3<cr>
 nnoremap <leader>b4 :b 4<cr>
-nnoremap <leader>b6 :b 5<cr>
-nnoremap <leader>b7 :b 6<cr>
-nnoremap <leader>b8 :b 7<cr>
+nnoremap <leader>b5 :b 5<cr>
+nnoremap <leader>b6 :b 6<cr>
+nnoremap <leader>b7 :b 7<cr>
 nnoremap <leader>b8 :b 8<cr>
 nnoremap <leader>b9 :b 9<cr>
 ab ** **********    [Title]    **********
