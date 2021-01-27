@@ -17,6 +17,7 @@ au FileType python map <buffer> <leader>1 /class
 au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def
+au FileType python vnoremap <buffer> <localleader>w '<,'>s/^/#/g
 
 """"""""""""""""""""""""""""""
 " => JavaScript section

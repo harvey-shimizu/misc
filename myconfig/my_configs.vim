@@ -64,7 +64,7 @@ Plug 'mtth/scratch.vim'
 "Plug 'python-mode/python-mode' 'branch': 'develop' }
 
 "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell.
-"Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 "Python Syntax highlightiing for Vim
 Plug 'vim-python/python-syntax'

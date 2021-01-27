@@ -62,8 +62,8 @@ set foldmethod=indent
 set clipboard=unnamed
 set encoding=UTF-8
 set autochdir
-"set foldopen=all
-"set foldclose=all
+set foldopen=all
+set foldclose=all
 set foldlevelstart=0
 set foldignore=
 
@@ -77,10 +77,21 @@ nnoremap <leader>aa :qa!<cr>
 nnoremap <leader>a :q<cr>
 nnoremap <localleader>a :q<cr>
 " Fast Python running
-nnoremap <leader>r :!python3 %<cr>
+"nnoremap <leader>r :!python3 %<cr>
 inoremap jk <esc>
 vnoremap jk <esc>
 nnoremap ev :e ~/.vimrc<cr>
+
+nnoremap <leader>q :call NewMakeBuffer()<cr>
+function! NewMakeBuffer()
+    let fname = input('Enter a new filename: ')
+    "echom fname
+    let path_fname = fnamemodify(fname, ':p')
+    "echom path_fname
+    if len(fname) > 0
+        execute "normal! :vsplit " .  path_fname . "\<cr>"
+    endif
+endfunction
 
 nnoremap <leader>hc :helpc<cr>
 " Very magic mode in searching
@@ -127,8 +138,12 @@ ab ** **********    [Title]    **********
 " Vimscript file settings --------------------- {{{
 augroup filetype_python
     autocmd!
-    autocmd FileType python nnoremap <buffer> <localleader> I#<esc>
+    autocmd FileType python nnoremap <buffer> <localleader>I #<esc>
     autocmd FileType python :iabbrev <buffer> iff if:<left>
+    autocmd FileType python nnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
+    autocmd FileType python nnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
+    autocmd FileType python vnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
+    autocmd FileType python vnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
 augroup END
 
 augroup trailing_whitespace
