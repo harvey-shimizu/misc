@@ -73,16 +73,16 @@ colorscheme PaperColor
 set showcmd
 
 " Fast quitting
-nnoremap <leader>aa :qa!<cr>
-nnoremap <leader>a :q<cr>
-nnoremap <localleader>a :q<cr>
+nnoremap <leader>qq :qa!<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <localleader>q :q<cr>
 " Fast Python running
 "nnoremap <leader>r :!python3 %<cr>
 inoremap jk <esc>
 vnoremap jk <esc>
 nnoremap ev :e ~/.vimrc<cr>
 
-nnoremap <leader>q :call NewMakeBuffer()<cr>
+nnoremap <leader>a :call NewMakeBuffer()<cr>
 function! NewMakeBuffer()
     let fname = input('Enter a new filename: ')
     "echom fname
