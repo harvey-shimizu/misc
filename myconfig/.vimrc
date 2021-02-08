@@ -121,30 +121,18 @@ set hidden
 nnoremap <C-L> :bnext<cr>
 nnoremap <C-H> :bprev<cr>
 nnoremap <leader>db :bd<cr>
+vnoremap <buffer> <leader>' :s/\(\h\w\+\),\?/'\1',/g<cr>:noh<cr>
+vnoremap <buffer> <leader>" :s/\(\h\w\+\),\?/"\1",/g<cr>:noh<cr>
+vnoremap <buffer> <leader>( :s/\(.*\)/(\1)/g<cr>:noh<cr>
+vnoremap <buffer> <leader>) :s/(\(.*\))/\1/g<cr>:noh<cr>
+vnoremap <buffer> <leader>[ :s/\(.*\)/[\1]/g<cr>:noh<cr>
+vnoremap <buffer> <leader>] :s/\[\(.*\)\]/\1/g<cr>:noh<cr>
+vnoremap <buffer> <leader>{ :s/\(.*\)/{\1}/g<cr>:noh<cr>
+vnoremap <buffer> <leader>} :s/{\(.*\)}/\1/g<cr>:noh<cr>
 
 nnoremap <leader>ls :ls<cr>
 nnoremap <leader>b1 :b 1<cr>
 nnoremap <leader>b2 :b 2<cr>
-nnoremap <leader>b3 :b 3<cr>
-nnoremap <leader>b4 :b 4<cr>
-nnoremap <leader>b5 :b 5<cr>
-nnoremap <leader>b6 :b 6<cr>
-nnoremap <leader>b7 :b 7<cr>
-nnoremap <leader>b8 :b 8<cr>
-nnoremap <leader>b9 :b 9<cr>
-ab ** **********    [Title]    **********
-
-" autocommand in Vim for pyhton script
-" Vimscript file settings --------------------- {{{
-augroup filetype_python
-    autocmd!
-    autocmd FileType python nnoremap <buffer> <localleader>I #<esc>
-    autocmd FileType python :iabbrev <buffer> iff if:<left>
-    autocmd FileType python nnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
-    autocmd FileType python nnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
-    autocmd FileType python vnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
-    autocmd FileType python vnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
-augroup END
 
 augroup trailing_whitespace
     autocmd!
@@ -152,4 +140,25 @@ augroup trailing_whitespace
     autocmd BufNewFile,BufRead * highlight mymark_space ctermbg=Green
     autocmd BufNewFile,BufRead * match mymark_space /\v\s+$/
 augroup END
-"}}}
+
+function! CompileAndRunFile(command)
+    silent !clear
+    execute "!" . a:command . " " . bufname("%")
+endfunction
+
+augroup python_filetype
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <localleader>r :call CompileAndRunFile("python3")<cr>
+    autocmd FileType python nnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
+    autocmd FileType python nnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
+    autocmd FileType python vnoremap <buffer> <localleader>w :s/^/#/<cr>:noh<cr>
+    autocmd FileType python vnoremap <buffer> <localleader>d :s/^#//<cr>:noh<cr>
+    "Making Dectionary Sctucture for pair data, word/tuple:word/list/dict/tuple, Feb/7/2021
+    autocmd FileType python vnoremap <buffer> <localleader>e :s/\v(\(.*\)\|'\h\w+'\|\d+)\s*,\s*(\(.*\)\|\{.*\}\|\[.*\]\|'\h\w+'\|\d+)/\1:\2/g<cr>:noh<cr>
+augroup END
+
+augroup go_filetype
+    autocmd!
+    autocmd FileType go nnoremap <buffer> <localleader>r :call CompileAndRunFile("go run")<cr>
+augroup END
+

@@ -20,6 +20,7 @@ export  FZF_DEFAULT_OPTS='--height 50% --reverse --inline-info --preview "bat --
 
 alias py='python3'
 alias python='python3'
+alias bp='bpython'
 alias zs='echo "source ~/.zshrc" && source ~/.zshrc'
 alias zv='echo "vi ~/.zshrc" && vi ~/.zshrc'
 alias l='ls -1A -G'

@@ -98,7 +98,7 @@ Plug 'ap/vim-buftabline'
 
 "Auto Pairs
 "Insert or delete brackets, parents, quotes in pair.
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 "Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.
 "Plug 'powerline/powerline'

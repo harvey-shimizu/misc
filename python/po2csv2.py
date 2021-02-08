@@ -4,7 +4,6 @@ import openpyxl
 import csv
 import re
 
-
 p = pathlib.Path('\\\\MO-QNAP01\Management\Purchasing\PurchaseOrders\\2020')
 lwb = openpyxl.Workbook()
 lsh = lwb.active
@@ -29,12 +28,22 @@ def irregular_format_process(x, key, list_row):
         if sh.title == 'PO':
             for ofts in oft_conf[key]:
                 print('----', ofts)
-                o = re.search(r'(\w??)(\d{1,5})-(\d{1,5})', ofts)
-                for row in range(int(o.group(2)), int(o.group(3))+1):
+#                o = re.compile(r'(\w??)(\d{1,5})-(\d{1,5})').search(ofts)
+                o = re.compile(r'(\w??)(?P<START>\d{1,5})-(?P<END>\d{1,5})').search(ofts)
+                for row in range(int(o.group('START')), int(o.group('END'))+1):
                     if sh['A'+str(row)].value != None:
-                        values = [ sh['A13'].value, sh['D13'].value, sh['M1'].value,\
-                                   sh['B'+str(row)].value, sh['F'+str(row)].value, sh['G'+str(row)].value, sh['I'+str(row)].value,\
-                                   '=' + 'E' + str(list_row+1) + '*G' + str(list_row+1), x.name ]
+                        values = [ \
+                                   sh['A13'].value,\
+                                   sh['D13'].value,\
+                                   sh['M1'].value,\
+                                   sh['B'+str(row)].value,\
+                                   sh['F'+str(row)].value,\
+                                   sh['G'+str(row)].value,\
+                                   sh['I'+str(row)].value,\
+                                   # Adding a summation function into a CELL in Excel file.
+                                   #'=' + 'E' + str(list_row+1) + '*G' + str(list_row+1), x.name\
+                                   '=E%s*G%s%s' % (str(list_row+1), str(list_row+1), x.name)\
+                                 ]
                         for n, value in zip(range(1,len(values)+1), values):
                             lsh.cell(list_row, n).value = value
                     list_row += 1
@@ -47,10 +56,10 @@ xls = list(p.glob('**/**/*.xlsm'))
 print('file counts:', len(xls))
 for x in xls:
 #    print(x)
-    f = re.search(r'(\d\d-\d{0,3}[A-Z]?).*.xlsm', x.name)
+    f = re.search(r'(?P<PO#>\d\d-\d{0,3}[A-Z]?).*.xlsm', x.name)
 #    print(f.group(1),'-----------------')
-    if f.group(1) in ire_list:
-        list_row = irregular_format_process(x, f.group(1), list_row)
+    if f.group('PO#') in ire_list:
+        list_row = irregular_format_process(x, f.group('PO#'), list_row)
     elif x.match(r'*R211*.xlsm'):
         list_row = irregular_format_process(x, 'Default', list_row)
     else:
