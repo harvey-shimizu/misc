@@ -49,8 +49,8 @@ t2 = time.time()
 print('\nsum')
 print(f'{sum:>10,}')
 
-lap = (t2 - t1)*10**6
-print (f"{lap=:.2f}us")
+elapse = (t2 - t1)*10**6
+print (f"{elapse=:.2f}us")
 
 #--------------------------------------
 # Another Solution
@@ -70,6 +70,6 @@ while c<limit:
 t2 = time.time()
 print('\nsum')
 print(f'{sum:>10,}')
-lap = (t2 - t1)*10**6
-print (f"{lap=:.2f}us")
+elapse = (t2 - t1)*10**6
+print (f"{elapse=:.2f}us")
 
