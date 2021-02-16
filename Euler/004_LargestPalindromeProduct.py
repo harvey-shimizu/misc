@@ -112,7 +112,6 @@ print (f"{elapse=:.2f}msec")
 # Another Solution
 #--------------------------------------
 
-palindrome_list = {}
 t1 = time.time()
 for abc in range(100, 999):
     for xyz in range(abc, 999): # <--- Min is changed to 'abc'
