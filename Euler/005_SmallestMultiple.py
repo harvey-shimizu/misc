@@ -10,19 +10,23 @@ import time
 import math
 import prime_gen as pr
 import sys
+import myprime as mp
 
 # this algorizm takes an elapsed time about 43s.
-#prime_list = list(range(2,21))
+#prime_list = list(range(2,20))
 t1 = time.time()
 prime_list = []
 m = 1
-for p in pr.g(20):
+#for p in pr.g(20):
+for p in mp.g(20):
+#for p in mp.g(10):
     m *= p
 prime_list.append(m)
+prime_list.reverse()
 prime_list.extend([16,9,8])
 smallest_multiple = 0
 found_flag = 0
-prime_list = list(range(2,11))
+#prime_list = list(range(2,11))
 print(prime_list)
 
 while found_flag == 0:
@@ -54,7 +58,8 @@ t1 = time.time()
 
 limit = math.sqrt(K)
 k = math.log(K)
-PrimeList = pr.g(K)
+#PrimeList = pr.g(K)
+PrimeList = mp.g(K)
 #print(PrimeList)
 alist = {}
 for p in PrimeList:
