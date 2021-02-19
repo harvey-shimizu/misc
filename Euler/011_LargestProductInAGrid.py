@@ -28,6 +28,8 @@ The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 
+import math
+
 g ='\
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00 \
@@ -50,4 +52,26 @@ g ='\
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54 \
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48 \
 '
+OFFS = 4
+GN = 20
+gl = g.split()
+h = lambda a,b: math.prod([int(s) for s in a[b:b+OFFS]])
+v = lambda a,b: math.prod([int(s) for s in a[b:b+GN*OFFS:GN]])
+d = lambda a,b: math.prod([int(s) for s in (a[b],a[b+GN+1],a[b+GN*2+2],a[b+GN*3+3])])
+h = lambda a,b: sum([int(s) for s in a[b:b+OFFS]])
+v = lambda a,b: sum([int(s) for s in a[b:b+GN*OFFS:GN]])
+d = lambda a,b: sum([int(s) for s in (a[b],a[b+GN+1],a[b+GN*2+2],a[b+GN*3+3])])
+#print(v(gl, 0))
+#print(h(gl, 0))
+#print(d(gl, 0))
+result = []
+for y in range(0,GN*(GN-OFFS+1),GN):
+    for x in range(0,GN-OFFS+1):
+        result.append(h(gl,x+y))
+        result.append(v(gl,x+y))
+        result.append(d(gl,x+y))
+
+print(result)
+print(len(result))
+print(max(result))
 
