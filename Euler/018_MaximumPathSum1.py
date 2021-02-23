@@ -31,6 +31,7 @@ Find the maximum total from top to bottom of the triangle below:
 
 NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
 '''
+import time
 
 t=[]
 t.append([75,])
@@ -55,4 +56,9 @@ def getMaxsum(l, i):
     else:
         return t[l][i] + max(t[-1][i], t[-1][i+1])
 
+t1 = time.time()
 print(getMaxsum(-len(t), 0))
+t2 = time.time()
+ela = (t2 - t1)*10**3
+print(f'{ela=:,.2f}ms')
+
