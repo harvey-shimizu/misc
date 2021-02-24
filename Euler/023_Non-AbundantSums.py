@@ -12,7 +12,23 @@ As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest numb
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
 '''
-
 import sumOfDivider as s
+import sys
 
+LIMIT = 28123
+
+al = []
+for n in range(1,LIMIT+1):
+    if s.sum_of_dividers(n) > n:
+        al.append(n)
+
+sal = set()
+for n in al:
+    for m in al[al.index(n):]:
+        if n + m  <= LIMIT:
+            sal.add(n + m)
+        else:
+            break
+
+print((LIMIT+1)*LIMIT//2 - sum(sal))
 
