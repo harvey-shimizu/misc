@@ -20,37 +20,73 @@ Find the value of d < 1000 for which 1/d contains the longest recurring cycle in
 from decimal import *
 
 def getDegitRecurringCycle(n):
-    l = list(str(n))
-    cyclePattern = {}
-    for cnt, digit in zip(range(1, len(l)+1),l[2:-2]):
-        cyclePattern[cnt] = digit
-#    print(n, cyclePattern)
-    if checkCycleNumber(cyclePattern):
-        return [x for x in cyclePattern.values()]
-    return None
+    return checkCycleNumber(list(str(n)))
 
-def checkCycleNumber(p):
-    preseq = 0
-    prevalue = True
-    count = 0
-    for seq, digit in p.items():
-        if seq - presq == 1 and digit ==  prevalue:
-            count += 1
-        else:
-            count = 0
-        if count > 10:
-            return False
-    return True
+def checkCycleNumber(l):
+    cyclePattern = []
+    PreambleLength = PRESICE
+    PreamblePattern = l[3:PreambleLength+2]
 
-getcontext().prec = 100
+    if len(PreamblePattern) < 4:
+        return False
+
+    cnt = 0
+    idx = 0
+    p = PreamblePattern
+    while len(l[3:-4]) > idx:
+        if  l[idx]   == p[0] and l[idx+1] == p[1] and\
+            l[idx+2] == p[2] and l[idx+3] == p[3]:
+            cnt += 1
+            if cnt == 1:
+                preidx = idx
+        if cnt == 2:
+            diff_idx = idx - preidx
+            break
+        idx += 1
+    if cnt == 2:
+        cyclePattern = PreamblePattern[:diff_idx]
+        return cyclePattern
+    return False
+
+PRESICE = 2500
+getcontext().prec = PRESICE
 max = 1
-for n in range(1,30):
+maxL = []
+maxN = 0
+maxp = 0
+for n in range(1,1000):
     p = Decimal(1)/Decimal(n)
     l = getDegitRecurringCycle(p)
     if l:
         if len(l) > max:
+            maxp = p
             max = len(l)
-            maxDigit = l
-            maxP = n
+            maxL = l
+            maxN = n
 
-print(f"1/{maxP}, {max}, {maxDigit}")
+print(maxN)
+
+# Another solutions
+# 24
+max_round = 0
+divider = 2
+
+while divider < 1000:
+    dividend = 1
+    remainders = list()
+
+    while True:
+        remainder = dividend % divider
+        if remainder in remainders:
+            first_index = remainders.index(remainder)
+            last_index = len(remainders)
+            if last_index - first_index > max_round:
+                max_round = last_index - first_index
+                number = divider
+            break
+        dividend = 10 * remainder
+        remainders.append(remainder)
+
+    divider += 1
+
+print(number)
