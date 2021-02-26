@@ -15,7 +15,7 @@ elif [ "$pl_or_ph" = "ph" ] || [ "$pl_or_ph" = "push" ]; then
 
     read -p "Please input a Euler program number for commiting: " number
 
-    git commit -m "Euler Program #{$number}"
+    git commit -m "Euler Program #$number"
     git push
 
 fi
