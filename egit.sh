@@ -12,7 +12,10 @@ if [ "$pl_or_ph" = "pl" ] || [ "$pl_or_ph" = "pull" ]; then
 elif [ "$pl_or_ph" = "ph" ] || [ "$pl_or_ph" = "push" ]; then
 
     git add Euler/*.py
-    git commit $files -m $message
-    git push origin
+
+    read -p "Please input a Euler program number for commiting: " number
+
+    git commit -m "Euler Program #{$number}"
+    git push
 
 fi
