@@ -19,9 +19,6 @@ Find the value of d < 1000 for which 1/d contains the longest recurring cycle in
 '''
 from decimal import *
 
-def getDegitRecurringCycle(n):
-    return checkCycleNumber(list(str(n)))
-
 def checkCycleNumber(l):
     cyclePattern = []
     PreambleLength = PRESICE
@@ -48,26 +45,26 @@ def checkCycleNumber(l):
         return cyclePattern
     return False
 
-PRESICE = 2500
-getcontext().prec = PRESICE
-max = 1
-maxL = []
-maxN = 0
-maxp = 0
-for n in range(1,1000):
-    p = Decimal(1)/Decimal(n)
-    l = getDegitRecurringCycle(p)
-    if l:
-        if len(l) > max:
-            maxp = p
-            max = len(l)
-            maxL = l
-            maxN = n
-
-print(maxN)
+def findMaxReciprocalCycle(n):
+    PRESICE = 2500
+    getcontext().prec = PRESICE
+    max = 1
+    maxN = 0
+    for n in range(1,1000):
+        p = Decimal(1)/Decimal(n)
+        l = checkCycleNumber(list(str(p)))
+        if l:
+            if len(l) > max:
+                max = len(l)
+                maxN = n
+    return maxN
 
 # Another solutions
 # 24
+#import myprime as p
+#pl = p.g(1000)
+#print(pl[-1])
+
 max_round = 0
 divider = 2
 
@@ -90,3 +87,40 @@ while divider < 1000:
     divider += 1
 
 print(number)
+
+# Another solutions
+'''
+Python - String solution
+I treated the problem as a string/substring problem. First I generated strings of the decimal of d to 5000 decimal places then did a brute force for substrings of increasing length. It runs in just a few seconds and could be optimized if required.
+'''
+
+from decimal import *
+# precision of decimal
+getcontext().prec = 5000
+
+# [integer d, length of recurrence]
+d = [7, 6]
+# max integer to test
+limit = 1000
+# start point for the initial substring
+start = 3
+
+# the range of integers to test e.g., 1/i
+for i in range(2, limit):
+    found = False
+    s = str(Decimal(1) / Decimal(i)).split('.')[1]
+
+    ss_len = 6
+    while (not found) and (ss_len < len(s)/2):
+        end = start + ss_len
+        found = False
+
+        if (not found) and (len(s) > end + ss_len):
+            ss = s[start: end]
+            if ss == s[end: end + ss_len]:
+                found = True
+                if ss_len > d[1]:
+                    d = [i, ss_len]
+                    print(d)
+
+        ss_len += 1
