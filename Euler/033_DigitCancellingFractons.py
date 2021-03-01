@@ -11,3 +11,18 @@ There are exactly four non-trivial examples of this type of fraction, less than 
 If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
 '''
 
+from fractions import Fraction
+from tqdm import trange
+import time
+
+start = time.time()
+product = 1
+for b in trange(2,10):
+    for a in range(1,b):
+        x = 9*a*b // (10*a - b)
+        if len(str(x)) == 1 and (10*a+x)/(10*x+b) == a/b:
+            print(f'{a}{x}/{x}{b} = {a}/{b}')
+            product *= a/b
+print(Fraction(product).limit_denominator())
+end = time.time()
+print(end-start)

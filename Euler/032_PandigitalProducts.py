@@ -40,11 +40,11 @@ def checkPandigited(d1, d2):
     return False
 
 total = list()
-for d1 in trange(1,987):
+for d1 in track(range(1,987)):
     for d2 in range(d1,9876):
         if checkPandigited(d1, d2):
             if len(str(d1)) <= 2 and not d1*d2 in total:
-                print(f'{d1} x {d2} = {d1*d2}')
+#                print(f'{d1} x {d2} = {d1*d2}')
                 total.append(d1*d2)
 console.print(sum(total))
 
