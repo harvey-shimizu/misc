@@ -13,21 +13,14 @@ d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 
 '''
 
-def getNthDigital(ord):
-    dig = len(str(ord))
-    if dig == 1:
-        return ord
-    return (ord - 10**(dig-1))//dig + getNthDigital(10**(dig-1)-1) + 1
-#    return getNthDigital(10**(dig-1)-1) + 1 + getNthDigital(10**(dig-2)-1) + 1
+import time
 
-def getOneDigital(ord):
-    dig = str(getNthDigital(ord))
-    return dig
-#    return dig[ord%len(dig)]
+start = time.time()
+products = 1
+cc = ''.join([str(c) for c in range(1_000_000)])
+for i in range(0,7):
+    products *= int(cc[10**i])
+print(products)
+end = time.time() - start
+print(end)
 
-print(getOneDigital(110))
-
-#s = 1
-#for pow in range(7):
-#    print(getOneDigital(10**pow))
-#    s *= getOneDigital(1**pow)
